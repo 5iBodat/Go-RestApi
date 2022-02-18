@@ -7,7 +7,7 @@ import (
 
 func Setup() *gorm.DB {
 	// Setup database
-	dsn := "sahat:sahat@(localhost:3306)/go_db?charset=utf8&parseTime=True&loc=Local"
+	dsn := "sahat:sahat@(localhost:3306)/golang_db?charset=utf8&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
