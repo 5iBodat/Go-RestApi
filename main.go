@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"golangApi.test/controllers"
 	"golangApi.test/models"
 )
 
@@ -23,6 +24,9 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"data": "Go Api"})
 	})
+
+	r.GET("/products", controllers.GetProducts)
+	r.POST("/products", controllers.CreateProduct)
 
 	r.Run(":8080")
 
