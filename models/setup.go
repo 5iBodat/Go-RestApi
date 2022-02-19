@@ -14,6 +14,7 @@ func Setup() *gorm.DB {
 	}
 
 	db.AutoMigrate(&Products{})
+	db.AutoMigrate(&Users{})
 
 	return db
 }
